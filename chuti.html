@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chuti</title>
+	<link rel="stylesheet" type="text/css" href="css/chuti.css">
+</head>
+<body>
+	<form method="post" name="chuti" action="#">
+		<!-- 每次出题时用户都可以在界面上定制如下参数：题目数量，算式数值范围（包括原始题目与运算过程中所有中间结果的绝对值的数值范围），题目中最多有多少个运算符，题目中是否包含乘除法，题目中是否包含括号。在点击相应出题按钮后将生成题目文件（不包含答案）到 result.txt 中。 -->
+		<!-- 加表单验证是否为数字 -->
+		<div class="detail"><label><p>题目数量</p><input type="text" name="count" id="count" /></label></div>
+		<div class="detail"><label><p>算式数值范围</p><input type="text" name="rangeLow" id="rangeLow" /><i>——</i><input type="text" name="rangeHigh" id="rangeHigh" /></label></div>
+		<div class="detail"><label><p>运算符的最大数目</p><input type="text" name="opeMax" id="opeMax" /></label></div>
+		<div class="detail"><p>是否包含乘除法</p>
+			<select name="if_multiply">
+		        <option value="yes">是</option>
+		        <option value="no">否</option>
+		    </select>
+	    </div>
+		<div class="detail"><p>是否包含括号</p>
+			<select name="if_bracket">
+		        <option value="yes">是</option>
+		        <option value="no">否</option>
+		    </select>
+	    </div>
+        <div class="detail"><input type="submit" name="submit" id="submit" /></div>
+    </form>
+</body>
+</html>
